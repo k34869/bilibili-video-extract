@@ -2,6 +2,8 @@
 
 bilibili video extract tool for Android Termux.
 
+Depends on the android-tools (adb)
+
 ## Usage
 
 ```shell
