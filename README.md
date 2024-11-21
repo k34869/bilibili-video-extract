@@ -2,7 +2,7 @@
 
 bilibili video extract tool for Android Termux.
 
-Depends on the android-tools (adb)
+Depends on the android-tools (`pkg install android-tool -y`)
 
 ## Usage
 
