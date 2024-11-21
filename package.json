@@ -1,9 +1,11 @@
 {
-  "name": "bve",
+  "name": "bilibili-video-extract",
   "version": "1.2.1",
   "description": "bilibili video extract tool.",
   "main": "main.js",
-  "bin": "main.js",
+  "bin": {
+    "bve": "main.js"
+  },
   "author": "Timeic",
   "license": "ISC",
   "dependencies": {
