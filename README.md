@@ -7,7 +7,7 @@ Depends on the android-tools (`pkg install android-tool -y`)
 ## Usage
 
 ```shell
-git clone https://gitee.com/k34869/bilibili-video-extract.git
+git clone https://github.com/k34869/bilibili-video-extract.git
 cd bilibili-video-extract
 npm install
 npm link
