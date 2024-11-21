@@ -1,0 +1,9 @@
+{
+    "cachePath": "/storage/emulated/0/Android/data/tv.danmaku.bilu/download/",
+    "stagePath": "/storage/emulated/0/.bveStage/",
+    "output": "/sdcard/ADM/%TITLE%/%PAGE_TITLE%",
+    "clearCache": true,
+    "permission": "adb",
+    "adbPort": "5555",
+    "danmu": true
+}
