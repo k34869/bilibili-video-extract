@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 const { program } = require('commander')
-const ora = require('ora')
 const { error } = require('./lib/stdan')
 const { configs } = require('./lib/defineConfig')
 const { getCacheList, extractVideo } = require(configs.permission === 'adb' ? './lib/adbMain' : './lib/normalMain')
@@ -20,18 +19,16 @@ program
     .option('-fu, --filter-uname <filterStr>', 'filter uname')
     .action(opts => {
         try {
-            const spinner = ora('WAITING...\n').start()
+            process.stdout.write('WAITING...\n')
             if (opts.input) {
                 let ids = opts.input.split(',')
                 ids.forEach(e => {
                     let id = e.match(/(^[0-9]{6,}\b|^s_[0-9]{2,}\b)/)
-                    spinner.stop()
                     console.log(`INFO: '${id[0]}' Extract...`)
                     extractVideo({dirId: id[0], forceAllow: opts.yes, clear: opts.clear, danmu: opts.extractDanmu, cover: opts.downloadCover})
                 })
             } else {
                 let items = getCacheList(',', '\n', {title: opts.filterTitle, uname: opts.filterUname}).formatStr
-                spinner.stop()
                 let db = JSON.parse(
                     execSync(`termux-dialog checkbox -v '${items}' -t '请选择(ft: ${opts.filterTitle ?? `无`}, fu: ${opts.filterUname ?? `无`}): '`).toString()
                 )
