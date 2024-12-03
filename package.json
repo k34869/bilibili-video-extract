@@ -1,15 +1,31 @@
 {
   "name": "bilibili-video-extract",
-  "version": "1.2.1",
-  "description": "bilibili video extract tool.",
-  "main": "main.js",
+  "binName": "bve",
+  "version": "1.3.1",
+  "description": "bilibili video extract tool",
+  "keywords": [
+    "bilibili",
+    "video extract",
+    "哔哩哔哩"
+  ],
+  "main": "index.js",
   "bin": {
-    "bve": "main.js"
+    "bve": "index.js"
   },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm64"
+  ],
   "author": "Timeic",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "adb-android-arm64": "^3.0.4",
     "commander": "^11.0.0",
+    "ffmpeg-android-arm64": "^4.0.2",
+    "lodash": "^4.17.21",
+    "ora": "^5.4.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

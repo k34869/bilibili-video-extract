@@ -1,18 +1,15 @@
-# bilibili video extract tool
+# bilibili video extract tool - 哔哩哔哩缓存视频提取工具
 
 bilibili video extract tool for Android Termux.
 
-Depends on the termux-api & android-tools (`pkg install termux-api android-tool -y`)
+Depends on the termux-api (`pkg install termux-api -y`)
 
 ## Usage
 
 ```shell
-git clone https://github.com/k34869/bilibili-video-extract.git
-cd bilibili-video-extract
-npm install
-npm link
+npm install bilibili-video-extract -g
 
-# run bilibili video extract, Android 13 Higher Use adb permission
+# run bilibili video extract, Android 11 Higher Use adb permission
 bve
 ```
 
@@ -21,16 +18,19 @@ bve
 ```
 Usage: bve [options] [command]
 
-bilibili video extract tool.
+bilibili video extract tool
 
 Options:
-  -V, --version        output the version number
-  -i, --input <dirId>  input dirId
-  -y, --yes            force allow
-  -cl, --clear         clear cache (default: true)
-  -dm, --danmu         extract danmu (default: true)
-  -h, --help           display help for command
+  -V, --version                    output the version number
+  -i, --input <dirId>              input dirId
+  -y, --yes                        force allow
+  -cl, --clear                     clear cache
+  --extract-danmu                  extract danmu
+  --download-cover                 download cover
+  -ft, --filter-title <filterStr>  filter title
+  -fu, --filter-uname <filterStr>  filter uname
+  -h, --help                       display help for command
 
 Commands:
-  ls                   list cache videos
+  ls [options]                     list cache videos
 ```
